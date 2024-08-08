@@ -1,0 +1,15 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings = ['@chainlink/contracts=lib/chainlink-brownie-contracts/contracts','@openzeppelin=lib/openzeppelin-contracts']
+
+[invariant]
+#指定模糊测试的运行次数
+runs = 128
+#指定模糊测试的搜索深度
+depth = 128
+#指定是否在遇到 revert 错误时中断测试
+fail_on_revert = true
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
